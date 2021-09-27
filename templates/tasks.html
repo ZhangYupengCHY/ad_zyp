@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+<!--    <meta name="description" content="lazada广告后台">-->
+<!--    <meta name="author" content="李舜禹">-->
+    <!--    <link rel="icon" href="{{ url_for('static', filename='mayun.ico') }}">-->
+<!--    <link rel="icon" href="/static/mayun.ico">-->
+    <title>定时任务</title>
+    <!--     jQuery文件。务必在bootstrap.min.js 之前引入-->
+    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+    <!--bootstrap-->
+    <script src="https://cdn.bootcss.com/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <!--    <link href="https://cdn.bootcss.com/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">-->
+    <!--    <script src="/static/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>-->
+    <link href="/static/bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
+    <!--    <link href="/static/css/mycss.css" rel="stylesheet">-->
+    <style>
+        button {border: none;
+                        background-color: transparent;
+                        outline: none;
+        }
+        html{     width:100%;    overflow-x:hidden;}；
+
+    </style>
+
+</head>
+
+<style>
+    .panel-heading {
+        padding:5px 0px;
+    }
+    .show_total{
+        margin-top:20px;
+        background-color:#003366;
+    }
+    h3{
+        margin:0 auto;
+    }
+    .lead{
+        margin-bottom:0px;
+    }
+</style>
+
+<body>
+<div class="container-fluid">
+    <div class="col-md-1 column"></div>
+    <div class="col-md-10 column">
+        <!--上传主内容-->
+        <div class="row" id="main-row">
+            <div class="col-md-3"></div>
+            <!--最近上传显示面板，显示最近上传成功的文件夹信息-->
+            <div class="col-md-6">
+                <div>
+                    <div class="well show_total">
+                        <h3 class='lead'><strong style="color:white;">定时任务</strong></h3>
+                    </div>
+                    <table class="table table-striped">
+                        <tr>
+                            {% for column in show_columns %}
+                            <th>{{column}}</th>
+                            {% endfor %}
+                        </tr>
+                        {% for index,row_value in allInfo.iterrows() %}
+                                <tr>
+                                    {% for value in row_value %}
+                                        <td>{{value}}</td>
+                                    {% endfor %}
+                                </tr>
+                        {% endfor %}
+                    </table>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

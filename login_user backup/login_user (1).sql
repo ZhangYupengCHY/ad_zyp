@@ -1,0 +1,109 @@
+-- phpMyAdmin SQL Dump
+-- version 4.8.5
+-- https://www.phpmyadmin.net/
+--
+-- 主机： 127.0.0.1
+-- 生成日期： 2020-04-01 10:54:19
+-- 服务器版本： 10.1.38-MariaDB
+-- PHP 版本： 7.3.4
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- 数据库： `ad_db`
+--
+
+-- --------------------------------------------------------
+
+--
+-- 表的结构 `login_user`
+--
+
+CREATE TABLE `login_user` (
+  `id` int(11) NOT NULL,
+  `name` varchar(128) NOT NULL,
+  `password` varchar(256) NOT NULL,
+  `sex` varchar(32) NOT NULL,
+  `c_time` datetime(6) NOT NULL,
+  `real_name` varchar(128) NOT NULL,
+  `pc_mac` varchar(256) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- 转存表中的数据 `login_user`
+--
+
+INSERT INTO `login_user` (`id`, `name`, `password`, `sex`, `c_time`, `real_name`, `pc_mac`) VALUES
+(4, 'marmot', '9ffaf8f81512ed190c588b95ee1eba2e665568bd5c48c50db4a774b8f7ff61e3', '男', '2019-04-12 17:56:58.566200', '汪磊', '4C:ED:FB:6D:1A:51 74:40:BB:71:47:34'),
+(5, '花a', '96f86d0ebe87a74ac48002b840db91b019920a08eeebd4b9b52bf58be151b51a', '男', '2019-04-12 18:17:22.766200', '何莲', 'E0:D5:5E:9C:5A:64 3C:2C:30:A8:BD:06 24:B6:FD:1C:16:77'),
+(6, 'pawn', '57356fe2d70ba1563ba226acbb0b283f46e01a3937aed88fe22d175faa3c38bc', '男', '2019-04-12 18:26:03.502200', '李晨', 'E0:D5:5E:FE:AB:82 80:A5:89:24:4E:D7 80:a5:89:24:4e:d6'),
+(7, 'C豆', '0523dd1ddf6f0449742c561004a56574ca7360c8378b5c3cf3cc999888ed616c', '男', '2019-04-16 09:19:47.037001', '王艳', 'E0:D5:5E:94:2C:96 74:DF:BF:B0:0E:E8'),
+(8, 'elvo', 'f19bb3076849cde90fd8bb8103b370b0c89f455639bef6d6febe8ce4525fc025', '男', '2019-04-16 17:01:08.640001', '陈梦文', 'E0:D5:5E:17:D5:6B 4C:1D:96:D2:F9:20 4C:1D:96:D2:F9:23'),
+(10, '黄星星', '79a2405ae2fdf33b0213b208f60c4e37a41d1e3c97f76ea66564dbc007ff6402', '男', '2019-04-22 13:30:24.688000', '黄星星', '4C:ED:FB:67:E9:D0'),
+(11, 'lkf', 'afcb5cd9e715629647ee388e0ced2491a9a8bb046337db2ddc16c565c91012c6', '男', '2019-04-22 13:31:25.851000', '廖凯锋', 'E0:D5:5E:FE:AC:3A 00:50:56:C0:00:08 00:50:56:C0:00:01 74:d0:2b:1a:40:22 b6:af:0c:d4:ef:1c'),
+(12, '小鱼', '7d6c623df6906ba3e93b29d72970b3ed0fda22fab61a5e924ee799e01a36b810', '男', '2019-04-22 13:34:17.677000', '向江燕', '4C:ED:FB:75:B7:89  BA:A2:E1:74:7E:D5 a7:5b:f0:b4:eb:a0 a4:ba:db:c2:6f:71\r\n fe:17:42:4d:2b:86\r\n'),
+(15, '刘晓颖', 'e0cf678eee29810b837cbb60d041912c87b0e5f0fa5aaa2c3d1b3c009cd031fa', '男', '2019-04-25 16:52:51.553000', '刘晓颖', 'E0:D5:5E:FF:63:2E 00:E0:4C:38:29:CE 24:FD:52:8A:D0:86'),
+(16, '蒋寅曦W01340', 'e0bdbd2b7b04d37f3c89d2c258303bb27c3ff267d7e86be1fcc0a6f438e8f73f', '男', '2019-04-26 10:51:47.280800', '蒋寅曦', '4C:CC:6A:2C:4D:93'),
+(17, 'marion', '491b1bf1d2911c90b2b20b27355df9c95ae1e06d93babc05d64a64293e848d19', '男', '2019-05-30 11:15:21.999000', '马良', '40:8D:5C:CC:9D:77 00:12:7B:71:0F:C1 04:7d:7b:9c:10:c2'),
+(19, '李娜W02562', 'e0cf678eee29810b837cbb60d041912c87b0e5f0fa5aaa2c3d1b3c009cd031fa', '男', '2019-06-10 11:51:44.804000', '李娜', '2C:FD:A1:5A:8A:BF 74:46:A0:86:20:B4'),
+(20, '舒婷', 'e0cf678eee29810b837cbb60d041912c87b0e5f0fa5aaa2c3d1b3c009cd031fa', '男', '2019-06-17 11:11:51.204000', '彭舒婷', 'E0:D5:5E:79:5C:9C 20:68:9D:1B:CD:E8 cc:2f:71:58:a3:cb'),
+(22, 'susu很忙', 'a9e90d4844a82641204d5eea18bfcb20f0ea70978fdcd43776ca473c2c7c7546', '男', '2019-06-18 10:50:31.468000', '苏雅丽', '00:D8:61:53:B1:84 50:EB:71:69:88:5E 50:EB:71:69:88:62'),
+(23, '小鱼儿', '8751621f7fd52ab422ae8bf08d48e0db976da2c8f4249d974b12d227ec2e1eff', '男', '2019-06-24 11:41:06.259000', '晏光宇', '00:D8:61:53:B1:5C F8:94:C2:BA:BF:AD 6C:4B:90:8A:38:04'),
+(24, 'Yoga', '74e09c8e2daf2ff98bccbbab1ec077ff57f4b73f06dc02f71ab930ee88e8b98a', '男', '2019-06-24 11:41:25.037000', '李萌', '00:D8:61:53:B2:03 ‎70:2C:1F:1E:3A:47 40:5b:d8:6b:c4:3e'),
+(25, 'zouyifei', 'bc8bd3f2e1b7ab9579acc0d04fb83ceb993f36859d9a57025db21045e6ac048f', '男', '2019-06-25 10:40:03.458000', '邹逸飞', '00:D8:61:53:B1:62'),
+(26, '毛汉芬W02673', '5623682aeef342d7a76359ecc3e28f9df425b89e7ba7e30d5cbc7145f332f6b0', '男', '2019-06-29 10:57:10.873327', '毛汉芬', '40:B0:76:11:16:16 50:2B:73:D9:5E:49 74:29:af:f6:b0:c4 d0:94:66:f7:60:a2'),
+(30, 'robinzhang', 'd3178ca68c16e1909fd08c18db37e6d44c749e2158f91180dcc8e3ead85777ce', '男', '2019-07-03 11:34:54.080207', '张立滨', '1C:1B:0D:76:24:52 18:4F:32:CA:51:3C'),
+(32, 'wangwei', '7f4a1dd17a74e770c3fd7e428841d35a810d88275070deb75b186c131ad2ae35', '男', '2019-07-08 12:04:14.787000', '汪维', 'E0:D5:5E:9C:6A:9D B2:C0:90:0C:B8:45'),
+(33, '刘银萍', '9e9857f055580c515c57bbb8b07b8a1bc112f0f3a297da0aa4c49cf677b860f5', '男', '2019-07-08 15:11:13.995000', '刘银萍', '00:D8:61:53:AD:F1 72:C9:2D:DA:0B:3B 8C:16:45:39:EF:75\r\n70:C9:4E:DA:27:A3'),
+(34, '贾晨阳', '9bbeb4f866e8255da4cb99cee912d6137939a609e2a1f8a52d0ca6c853800500', '男', '2019-07-10 11:11:20.739403', '贾晨阳', '00:D8:61:53:AF:A0 D0:57:7B:0B:DD:B7 98:e7:f4:65:72:ed\r\n'),
+(35, 'ASL', '25d83ddea1d73cd5fab85223905815bebcb9146815ffb7815d278061a69caaf2', '男', '2019-07-18 11:16:35.893000', '陈悦', '00:D8:61:53:AF:D3 40:8D:5C:6B:E4:B4'),
+(38, 'lisy10', 'a816b6521ae3b44e9998d41ad884af1a5795d7fa6ba5b851eff21fb66aea79b1', '男', '2019-08-01 11:49:24.434204', '李舜禹', '00:D8:61:53:B1:31 D0:7E:35:82:E7:27 D0:7E:35:82:E7:2B'),
+(39, 'kof180', 'bc9227eb5a727a7d1be1910d3394235a5e33aee3db4e0a87a57b80308a4d6425', '男', '2019-08-01 11:49:32.525204', '柯凡', 'E0:D5:5E:79:4E:9E 9C:5C:8E:10:8A:4C'),
+(41, '曾德霞', '3f3a4e6745b83d06be865adfb123e5f5612a1348c659779a1b039797376da8ce', '男', '2019-08-12 11:18:36.058200', '曾德霞', '00:D8:61:53:AF:AB EC:A8:6B:3C:DD:10  EC:A8:6B:3C:DD:10'),
+(43, '虢智蕊W02867', 'e0cf678eee29810b837cbb60d041912c87b0e5f0fa5aaa2c3d1b3c009cd031fa', '男', '2019-09-02 13:52:25.155851', '虢智蕊', 'E0:D5:5E:79:55:24 A4:17:31:F8:27:60 b8:88:e3:f7:2b:fe'),
+(44, 'liuyan', 'd8593a7dac489ccd55ff828c3aa773bcb919b78134ca771a02ba657c628bc289', '男', '2019-09-05 11:42:55.423429', '刘艳', '00:D8:61:53:B1:68 24:FD:52:78:F6:E4'),
+(45, 'zypw02842', '40f100fb1f61593338721eabd0170611e7011af74de4df81ae954bb2ad782927', '男', '2019-09-09 16:30:23.840625', '张于鹏', 'E0:D5:5E:98:8E:10'),
+(46, 'lwj88', '85d849360e4ee72300fff76e6b8fb0076cb9bbf6afb021eeceedae3124d9243e', '男', '2019-09-17 10:55:39.079500', '刘碗菊', '1C:1B:0D:C3:F2:E0 AF:36:08:B4:3C:AB  f2:aa:0b:d5:43:40\r\n E6:53:A0:AC:E8:F3 95:38:8e:dc:b4:64 97:13:23:b8:62:0a\r\n 90:1f:2a:ac:e9:9e\r\n'),
+(47, '阿羌', '524100fd2e6ce151cdebc0093cd89c1b1a7173caf705992354871efbc99e4fe1', '男', '2019-09-20 11:46:33.296296', '羌子君', '38:D5:47:AD:76:23 ‎C0:B5:D7:0B:A3:D3 C0:B5:D7:0B:A3:D4'),
+(49, 'W02892', '48c6144e841d40bd8c8b8db0781f473e52f6b8de0392ee4022707cc5110afd11', '男', '2019-09-24 09:43:04.646875', '赵天钰', '40:B0:76:11:15:B2 94:39:E5:94:20:E3 B8:70:F4:4A:FC:C2'),
+(50, 'Danielle', '9eade753adbb443df349266edeb5b0857706c7ad7a180f64cca468d502fa81a1', '男', '2019-09-27 11:19:26.997460', '周丹', '00:D8:61:53:AD:E7  C4:9D:ED:91:9B:6F 89:AD:56:F5:1D:3E'),
+(52, 'cui', '136947b4db70a5941232f25b8772167eac9fd42274fae70b2c4f2039971dce55', '男', '2019-11-05 15:01:48.413617', '崔传周', 'E0:D5:5E:FF:70:9D 34:68:95:9C:86:DF 2C:60:0C:6A:E3:4E'),
+(53, 'Dan', 'e0cf678eee29810b837cbb60d041912c87b0e5f0fa5aaa2c3d1b3c009cd031fa', '男', '2019-11-08 11:12:16.302289', '时丹丹', 'E0:D5:5E:79:4F:43 00:1C:42:EC:6A:31 28:cf:e9:0f:d7:8e'),
+(54, 'ldaqc', 'f7830e32c64583081cd2e4d514bfc8d04e24a0e5cfca8992d4e604cd9430100c', '男', '2019-11-08 11:15:30.630414', '廖丹', 'E0:D5:5E:9B:B7:02 1C:4B:D6:72:67:27 E0:B9:A5:D2:22:9E E0:B9:A5:D1:40:4A'),
+(55, 'laisui', '219477e329b1a98abc354f52a749323b5a9e98a6ab524e54bcefbe9718bed2d7', '男', '2019-11-11 18:33:01.015914', '毛洵', 'E0:D5:5E:9B:B0:A8'),
+(56, '丁贝200387', 'f4e051dccb7a9e615cf3954e793734e514833aa724c4d70836d2cc23e513ecc4', '男', '2019-11-25 14:00:43.865367', '丁贝', 'E0:D5:5E:9B:B5:7F 10:0B:A9:C2:29:54 00:21:CC:BE:C2:F9');
+
+--
+-- 转储表的索引
+--
+
+--
+-- 表的索引 `login_user`
+--
+ALTER TABLE `login_user`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `name` (`name`);
+
+--
+-- 在导出的表使用AUTO_INCREMENT
+--
+
+--
+-- 使用表AUTO_INCREMENT `login_user`
+--
+ALTER TABLE `login_user`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=57;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
